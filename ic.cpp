@@ -84,9 +84,9 @@ int main ()
 	
 	//wczytanie z pliku parametrow N i M:
 	vector <int> N;
-	N = wczytaj_N("pre_do_symulacji.txt");
+	N = wczytaj_N("appa_do_symulacji.txt");
 	vector <int> M;
-	M = wczytaj_M("pre_do_symulacji.txt");
+	M = wczytaj_M("appa_do_symulacji.txt");
 	
 	//rozmiar segmentu poczatkowego:
 	No = p + q;
@@ -95,19 +95,19 @@ int main ()
 	{
 		//pliki do zapisu wynikow:
 		//wszystkie cytowania
-		string name="PRE_par_wszystkie_" + to_string(i+1) + ".txt"; 
+		string name="APPA_los_wszystkie_" + to_string(i+1) + ".txt"; 
 		ofstream plik_wynikowy(name);
 			
 		//cytowania wlasne
-		string name_auto="PRE_par_auto_" + to_string(i+1) + ".txt";
+		string name_auto="APPA_los_auto_" + to_string(i+1) + ".txt";
 		ofstream plik_wynikowy_auto(name_auto);
 			
 		//cytowania obce
-		string name_obce="PRE_par_obce_" + to_string(i+1) + ".txt";
+		string name_obce="APPA_los_obce_" + to_string(i+1) + ".txt";
 		ofstream plik_wynikowy_obce(name_obce);
 			
 		//czas
-		string name_czas="PRE_par_czas_" + to_string(i+1) + ".txt"; 
+		string name_czas="APPA_los_czas_" + to_string(i+1) + ".txt"; 
 		ofstream plik_wynikowy_czas(name_czas);
 		
 		for (int pp = 0; pp < 100; pp++)
