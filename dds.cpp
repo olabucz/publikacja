@@ -37,9 +37,9 @@ int main() {
 	srand (time(NULL));
 	
     //wczytanie wektorow z plikow:
-    vector<vector<int>> N_t = wczytaj_tablice_wektorow("N_t.txt");
-    vector<vector<int>> C_auto_t = wczytaj_tablice_wektorow("Cauto_t.txt"); 
-    vector<vector<int>> C_obce_t = wczytaj_tablice_wektorow("Cobce_t.txt"); 
+    vector<vector<int>> N_t = wczytaj_tablice_wektorow("dds_N_t.txt");
+    vector<vector<int>> C_auto_t = wczytaj_tablice_wektorow("dds_Cauto_t.txt"); 
+    vector<vector<int>> C_obce_t = wczytaj_tablice_wektorow("dds_Cobce_t.txt"); 
            
     if((N_t.size() != C_obce_t.size()) || (N_t.size() != C_auto_t.size()) || (C_obce_t.size() != C_auto_t.size()) ){
 		 cout<<"Rozna dlugosc plikow!"<<endl; 
