@@ -84,9 +84,9 @@ int main ()
 	
 	//wczytanie z pliku parametrow N i M:
 	vector <int> N;
-	N = wczytaj_N("appa_do_symulacji.txt");
+	N = wczytaj_N("ic_appa.txt");
 	vector <int> M;
-	M = wczytaj_M("appa_do_symulacji.txt");
+	M = wczytaj_M("ic_appa.txt");
 	
 	//rozmiar segmentu poczatkowego:
 	No = p + q;
