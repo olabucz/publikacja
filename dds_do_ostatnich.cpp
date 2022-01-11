@@ -37,9 +37,9 @@ int main() {
 	srand (time(NULL));
 	
     //wczytanie wektorow z plikow:
-    vector<vector<int>> N_t = wczytaj_tablice_wektorow("N_t.txt"); 
-    vector<vector<int>> C_auto_t = wczytaj_tablice_wektorow("Cauto_t.txt"); 
-    vector<vector<int>> C_obce_t = wczytaj_tablice_wektorow("Cobce_t.txt"); 
+    vector<vector<int>> N_t = wczytaj_tablice_wektorow("dds_N_t.txt"); 
+    vector<vector<int>> C_auto_t = wczytaj_tablice_wektorow("dds_Cauto_t.txt"); 
+    vector<vector<int>> C_obce_t = wczytaj_tablice_wektorow("dds_Cobce_t.txt"); 
  
 	if((N_t.size() != C_obce_t.size()) || (N_t.size() != C_auto_t.size()) || (C_obce_t.size() != C_auto_t.size()) ){
 		 cout<<"Rozna dlugosc plikow!"<<endl; 
@@ -47,7 +47,7 @@ int main() {
 	}
 	
 	else{
-		for(int i = 3; i < 4; i++) //czyli dla każdej osoby ----------- N_t.size()
+		for(int i = 0; i < N_t.size(); i++) //czyli dla każdej osoby ----------- N_t.size()
 		{
 			//pliki do zapisu wynikow:
 			//wszystkie cytowania
@@ -84,10 +84,8 @@ int main() {
 						sum_of_elems += N_t[i][s];
 					}
 					
-					cout<<"j: "<<j<<endl;
 					//pierwszy rok - początek symulacji - najpierw publikacje, potem cytowania 
 					if(j == 0){
-						cout<<"jeden"<<endl;
 						//najpierw publikacje
 						for(int k = 0; k < N_t[i][j]; k++){
 							N.push_back(k+1); //wstawienie numeru publikacji 
@@ -97,6 +95,7 @@ int main() {
 						//cytowania własne:
 						for(int l = 0; l < C_auto_t[i][j]; l++){
 							tablica.push_back(N[(N.size()-1 - 1) - l]); //autocytowania do C_auto_t[i][j] OSTATNICH PRAC
+							//drugie (-1) jest dla wersji z cytowaniami bez ostatniej dodanej publikacji
 							cyt_wlasne.push_back(tablica[tablica.size() - 1]);
 						}
 						//cytowania obce:	
@@ -104,19 +103,11 @@ int main() {
 							tablica.push_back(tablica[rand() % (tablica.size() - C_auto_t[i][j] - m)] ); //cytowania obce PREFERENCYJNIE
 							// - C_auto_t[i][j] - by nie losowalo z dodanych przed chwila autocytowan
 							cyt_obce.push_back(tablica[tablica.size() - 1]);
-						}
-						
-						
-						for(int t = 0; t < tablica.size(); t++){
-						cout<<tablica[t]<<" ";
-						}
-						cout<<endl;
-						
+						}						
 					}
 					
 					//przypadek, gdy sumaryczna liczba publikacji do (j-1)-tego kroku jest mniejsza niż liczba autocytowan w j-tym kroku
 					else if((j != 0) && (sum_of_elems < C_auto_t[i][j])){ 
-						cout<<"dwa"<<endl;
 						//najpierw publikacje
 						for(int k = 0; k < N_t[i][j]; k++){
 							N.push_back(N.back() + 1);
@@ -125,6 +116,7 @@ int main() {
 						//cytowania własne:
 						for(int l = 0; l < C_auto_t[i][j]; l++){
 							tablica.push_back(N[(N.size()-1 - 1) - l]); //autocytowania do C_auto_t[i][j] OSTATNICH PRAC
+							//drugie (-1) jest dla wersji z cytowaniami bez ostatniej dodanej publikacji
 							cyt_wlasne.push_back(tablica[tablica.size() - 1]);						
 						}
 						//cytowania obce:	
@@ -133,18 +125,10 @@ int main() {
 							// - C_auto_t[i][j] - by nie losowalo z dodanych przed chwila autocytowan
 							cyt_obce.push_back(tablica[tablica.size() - 1]);
 						}
-						
-						
-						for(int t = 0; t < tablica.size(); t++){
-						cout<<tablica[t]<<" ";
-						}
-						cout<<endl;
-						
 					}
 					
 					//kolejne/pozostale etapy symulacji - najpierw cytowania, potem publikacje
 					else{ 
-						cout<<"trzy"<<endl;
 						//najpierw cytowania:
 						//własne:
 						for(int l = 0; l < C_auto_t[i][j]; l++){
@@ -163,14 +147,7 @@ int main() {
 								N.push_back(N.back() + 1);
 								tablica.push_back(N[N.size()- 1]); 
 							}
-						}
-						
-						for(int t = 0; t < tablica.size(); t++){
-						cout<<tablica[t]<<" ";
-						}
-						cout<<endl;
-						
-						
+						}	
 					}
 				}
 								
