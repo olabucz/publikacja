@@ -13,6 +13,6 @@ dds.cpp:
 
 dds_do_ostatnich.cpp
 - jedyna zmiana względem dds.cpp polega na obliczaniu sumy (~82 linijka) oraz, oczywiście, sposobie przydzielania autocytowań
-- ostatecznie trochę nie jestem pewna tych powstałych 4ech warunków, można je w przyszłości jakoś uporządkować bardziej, jeśli będzie potrzeba, na ten moment już robię symulacje 
+- update(13.01): ostatecznie trochę nie jestem pewna tych powstałych 4ech warunków, można je w przyszłości jakoś uporządkować bardziej, jeśli będzie potrzeba, na ten moment już robię symulacje 
 
 :) 
