@@ -1,4 +1,4 @@
-# publ
+# publikacja
 
 Trzy pliki .cpp: ic, dds i dds_do_ostatnich. Do każdego dorzuciłam również przykładowe pliki do inputu z danymi. 
 
