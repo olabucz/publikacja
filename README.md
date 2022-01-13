@@ -11,6 +11,7 @@ dds.cpp:
 - chyba wszystko opisane w komentarzach 
 
 dds_do_ostatnich.cpp
+- update(12.01.2022): PROGRAM JESZCZE DO DOPRACOWANIA
 - jedyna zmiana względem dds.cpp polega na obliczaniu sumy (~82 linijka) oraz, oczywiście, sposobie przydzielania autocytowań
 
 
