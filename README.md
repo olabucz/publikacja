@@ -5,10 +5,10 @@ Trzy pliki .cpp: ic, dds i dds_do_ostatnich. Do każdego dorzuciłam również p
 
 ic.cpp:
 - względem pracy magisterskiej zmieniłam jedynie sposób zapisu do plików, samo rozdzielanie cytowań pozostało tak samo
-- zmiana przydziału autocytowań (losowo <-> preferencyjnie) to zakomentowanie i odkomentowanie odpowiednich linijek kodu w części dla autocytowań (opisane komentarzami)
 - update(13.01): to chyba już nieaktualne :)
 
 dds.cpp:
+- zmiana przydziału autocytowań (losowo <-> preferencyjnie) to zakomentowanie i odkomentowanie odpowiednich linijek kodu w części dla autocytowań (opisane komentarzami)
 - raczej wszystko opisane w komentarzach 
 
 dds_do_ostatnich.cpp
