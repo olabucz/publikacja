@@ -9,7 +9,7 @@ ic.cpp:
 
 dds.cpp:
 - zmiana przydziału autocytowań (losowo <-> preferencyjnie) to zakomentowanie i odkomentowanie odpowiednich linijek kodu w części dla autocytowań (opisane komentarzami)
-- raczej wszystko opisane w komentarzach 
+- raczej wszystko opisane komentarzami
 
 dds_do_ostatnich.cpp
 - jedyna zmiana względem dds.cpp polega na obliczaniu sumy (~82 linijka) oraz, oczywiście, sposobie przydzielania autocytowań
