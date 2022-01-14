@@ -14,7 +14,7 @@ dds.cpp:
 dds_do_ostatnich.cpp
 - jedyna zmiana względem dds.cpp polega na obliczaniu sumy (~82 linijka) oraz, oczywiście, sposobie przydzielania autocytowań
 - update(13.01): ostatecznie trochę nie jestem pewna tych powstałych 4ech warunków, można je w przyszłości jakoś uporządkować bardziej, jeśli będzie potrzeba, na ten moment już robię symulacje
-- algorytm do przydzielania cytowań własnych jest taki sam w pierwszych 3ech przypadkach, tylko w else jest inny, acz "podstawowy" (bo w tym przypadku nie powinno być problemów)
+- algorytm do przydzielania cytowań własnych jest taki sam w pierwszych 3ech przypadkach, tylko w else jest inny, acz "podstawowy" (bo w tym przypadku nie powinny występować problemy)
 
 
 :) 
